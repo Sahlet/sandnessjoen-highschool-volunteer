@@ -24,7 +24,6 @@ div img {
     right:0;
     bottom:0;
     margin:auto;
-    height: 85vh;
 }
 
 </style>
@@ -32,9 +31,23 @@ div img {
 <body>
 
 <div>
-    <img src="./Sources/contacts-cropped.jpg">
+    <img src="./Sources/contacts-cropped.jpg" id = "contacts-img">
 </div>
 
 </body>
+
+<script>
+
+const img = document.getElementById("contacts-img");
+
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  // true for mobile device
+  img.style.height = "86vh";
+}else{
+  // false for not mobile device
+}
+
+</script>
+
 </html>
 
